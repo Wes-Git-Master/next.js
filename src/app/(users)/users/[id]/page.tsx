@@ -1,14 +1,17 @@
 import React from 'react';
+import {userService} from "@/services/api.service";
 
-type Params = {params: { id: string }}
+type Params = { params: { id: string } }
 
-const UserPage = ({params}:Params) => {
+const UserPage = async ({params}: Params) => {
+
+    let user = await userService.getUsersByid(params.id);
 
     return (
         <div>
 
-            UserPage {params.id}
-            
+            {user?.name} : {user?.email}
+
         </div>
     );
 };

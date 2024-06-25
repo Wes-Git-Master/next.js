@@ -8,6 +8,9 @@ const MenuComponent = () => {
 
             <ul>
                 <li>
+                    <Link href={'/'}>home</Link>
+                </li>
+                <li>
                     <Link href={'/users'}>users</Link>
                 </li>
                 <li>
