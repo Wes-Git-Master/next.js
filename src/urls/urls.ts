@@ -9,7 +9,12 @@ const urlBuilder = {
     postBaseUrl: '/posts',
     posts: {
         allPosts: () => base + urlBuilder.postBaseUrl,
-        postsOfSingleUser: (id:string | number) => base + urlBuilder.postBaseUrl + '/' + id
+        postsOfSingleUser: (userId: string | number) => base + urlBuilder.postBaseUrl + '/' + userId
+    },
+    commentsBaseUrl: '/comments',
+    comments: {
+        allComments: () => base + urlBuilder.commentsBaseUrl,
+        commentsOfSinglePost: (postId: string | number) => base + urlBuilder.postBaseUrl + '/' + postId + urlBuilder.commentsBaseUrl
     }
 
 }

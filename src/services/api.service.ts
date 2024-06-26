@@ -16,6 +16,7 @@ const userService = {
 }
 
 const postService = {
+
     getAllPosts: async (): Promise<IPost[]> => {
         return await fetch(urlBuilder.posts.allPosts())
             .then(value => value.json())
@@ -24,9 +25,24 @@ const postService = {
         return await fetch(urlBuilder.posts.postsOfSingleUser(userId))
             .then(value => value.json())
     }
+
+}
+
+const commentsService = {
+
+    getAllComments: async (): Promise<IComment[]> => {
+        return await fetch(urlBuilder.comments.allComments())
+            .then(value => value.json())
+    },
+    getAllCommentsOfSinglePost: async (postId: string | number): Promise<IComment[]> => {
+        return await fetch(urlBuilder.comments.commentsOfSinglePost(postId))
+            .then(value => value.json())
+    }
+
 }
 
 export {
     userService,
-    postService
+    postService,
+    commentsService
 }
