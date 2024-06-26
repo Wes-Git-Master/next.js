@@ -5,7 +5,7 @@ type Params = { params: { id: string } }
 
 const UserPage = async ({params}: Params) => {
 
-    let user = await userService.getUsersByid(params.id);
+    let user = await userService.getUsersById(params.id);
 
     return (
         <div>

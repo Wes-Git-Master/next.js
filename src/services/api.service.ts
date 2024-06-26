@@ -8,15 +8,15 @@ const urlBuilder = {
 
 const userService = {
     getAllUsers: async (): Promise<IUser[]> => {
-        let users = await fetch(urlBuilder.allUsers())
+        return await fetch(urlBuilder.allUsers())
             .then(value => value.json());
-        return users
+
 
     },
-    getUsersByid: async (id: string | number): Promise<IUser | null> => {
-        let user: IUser = await fetch(urlBuilder.singleUser(id))
+    getUsersById: async (id: string | number): Promise<IUser | null> => {
+        return await fetch(urlBuilder.singleUser(id))
             .then(value => value.json());
-        return user
+
     }
 }
 export {

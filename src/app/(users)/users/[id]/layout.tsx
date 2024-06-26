@@ -8,7 +8,7 @@ import {userService} from "@/services/api.service";
 
 export const generateMetadata = async ({params}: { params: { id: string } }): Promise<Metadata> => {
     console.log(params.id, '!!!')
-    let user = await userService.getUsersByid(params.id);
+    let user = await userService.getUsersById(params.id);
     return {title: user?.username}
 }
 
