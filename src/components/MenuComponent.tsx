@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from "next/link";
+import NavLinkClientComponent from "@/components/navlick_client_component/NavLinkClientComponent";
 
 const MenuComponent = () => {
 
@@ -11,13 +12,13 @@ const MenuComponent = () => {
                     <Link href={'/'}>home</Link>
                 </li>
                 <li>
-                    <Link href={'/users'}>users</Link>
+                    <NavLinkClientComponent path={'/users'}>users</NavLinkClientComponent>
                 </li>
                 <li>
-                    <Link href={'/posts'}>posts</Link>
+                    <NavLinkClientComponent path={'/posts'}>users</NavLinkClientComponent>
                 </li>
                 <li>
-                    <Link href={'/comments'}>comments</Link>
+                    <NavLinkClientComponent path={'/comments'}>comments</NavLinkClientComponent>
                 </li>
             </ul>
 
