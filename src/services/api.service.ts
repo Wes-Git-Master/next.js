@@ -8,14 +8,7 @@ const urlBuilder = {
 
 const userService = {
     getAllUsers: async (): Promise<IUser[]> => {
-        let users = await fetch(urlBuilder.allUsers(),{
-            // cache: 'no-cache'    - dynamic fetch
-            // cache: 'no-store'    - SSR
-            // cache: 'force-cache' - SSG
-            // next: {revalidate: 60} - incremental fetch
-
-
-        })
+        let users = await fetch(urlBuilder.allUsers())
             .then(value => value.json());
         return users
 
