@@ -12,6 +12,7 @@ const UsersPage = async () => {
                 {
                     allUsers.map((user: IUser) => (<li key={user.id}>
                         <UserComponent user={user}/>
+
                     </li>))
                 }
             </ul>

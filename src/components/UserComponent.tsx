@@ -9,9 +9,7 @@ const UserComponent: FC<IProps> = ({user}) => {
 
     return (
         <div>
-
             <Link href={`/users/${user.id}`}>{user.id}: {user.name}</Link>
-
         </div>
     );
 };
